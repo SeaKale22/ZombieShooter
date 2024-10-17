@@ -30,19 +30,23 @@ public class SimpleShoot : MonoBehaviour
             gunAnimator = GetComponentInChildren<Animator>();
     }
 
-    void Update()
+    // void Update()
+    // {
+    //     //If you want a different input, change it here
+    //     if (Input.GetButtonDown("Fire1"))
+    //     {
+    //         //Calls animation on the gun that has the relevant animation events that will fire
+    //         gunAnimator.SetTrigger("Fire");
+    //     }
+    // }
+
+    public void PullTheTrigger()
     {
-        //If you want a different input, change it here
-        if (Input.GetButtonDown("Fire1"))
-        {
-            //Calls animation on the gun that has the relevant animation events that will fire
-            gunAnimator.SetTrigger("Fire");
-        }
+        gunAnimator.SetTrigger("Fire");
     }
 
-
     //This function creates the bullet behavior
-    void Shoot()
+    public void Shoot()
     {
         if (muzzleFlashPrefab)
         {
