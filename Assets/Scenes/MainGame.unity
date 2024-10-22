@@ -352,7 +352,7 @@ Transform:
   m_GameObject: {fileID: 97273266}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70559186, z: -0, w: 0.7086186}
-  m_LocalPosition: {x: -7.22, y: -3.2, z: 9.46}
+  m_LocalPosition: {x: -7.28, y: -3.2, z: 9.46}
   m_LocalScale: {x: 9.0749, y: 11.069, z: 0.63889}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -858,24 +858,44 @@ PrefabInstance:
       value: sword
       objectReference: {fileID: 0}
     - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.75703627
+      value: 0.84441555
       objectReference: {fileID: 0}
     - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.65337294
+      value: 0.5354172
       objectReference: {fileID: 0}
     - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000059604638
+      value: -0.016882658
       objectReference: {fileID: 0}
     - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000059604638
+      value: 0.0024265647
       objectReference: {fileID: 0}
     - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 81.593
+      value: 64.731
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386205189460080952, guid: fcda451334e7d084c81b3f61a8494c80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.877
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -15,6 +15,7 @@ public class SkeletonController : MonoBehaviour
     private float _currentHealth;
     private TMP_Text _heathText;
     private bool canBeHit = true;
+    private bool alive = true;
     
     private NavMeshAgent _agent;
     
@@ -57,19 +58,24 @@ void Start()
     {
         playerInSight = Physics.CheckSphere(transform.position, sightRange, playerLayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLayer);
-        if (!playerInSight && !playerInAttackRange)
+        if (alive)
         {
-            Patrol();
+            if (!playerInSight && !playerInAttackRange)
+            {
+                Patrol();
+            }
+
+            if (playerInSight && !playerInAttackRange)
+            {
+                Chase();
+            }
+
+            if (playerInSight && playerInAttackRange)
+            {
+                Attack();
+            }
         }
-        if (playerInSight && !playerInAttackRange)
-        {
-            Chase();
-        }
-        if (playerInSight && playerInAttackRange)
-        {
-            Attack();
-        }
-        
+
         // Track current health in canvus
         _heathText.text = $"HP: {_currentHealth}";
     }
@@ -129,15 +135,6 @@ void Start()
             _agent.SetDestination(transform.position);
         }
     }
-
-    // void EnableAttack()
-    // {
-    //     _weaponCollider.enabled = true;
-    // }
-    // void DisableAttack()
-    // {
-    //     _weaponCollider.enabled = false;
-    // }
     void SearchForDestination()
     {
         float z = Random.Range(-walkingRange, walkingRange);
@@ -178,6 +175,7 @@ void Start()
     {
         if (_currentHealth <= 0)
         {
+            alive = false;
             canBeHit = false;
             walkspeed = 0f;
             chasespeed = 0f;
